@@ -278,11 +278,35 @@ wheels = [
 ]
 
 [package.optional-dependencies]
+duckdb = [
+    { name = "duckdb" },
+]
 parquet = [
     { name = "pyarrow" },
 ]
 sql-database = [
     { name = "sqlalchemy" },
+]
+
+[[package]]
+name = "dlt-sakila"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "dlt", extra = ["duckdb", "parquet", "sql-database"] },
+    { name = "duckdb" },
+    { name = "ipykernel" },
+    { name = "matplotlib" },
+    { name = "pandas" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "dlt", extras = ["duckdb", "parquet", "sql-database"], specifier = ">=1.19.1" },
+    { name = "duckdb", specifier = ">=1.4.2" },
+    { name = "ipykernel", specifier = ">=7.1.0" },
+    { name = "matplotlib", specifier = ">=3.10.7" },
+    { name = "pandas", specifier = ">=2.3.3" },
 ]
 
 [[package]]
@@ -1252,27 +1276,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/4c/f7/1c65e0245d4c7009a87ac92908294a66e7e7635eccf76a68550f40c6df80/rich_argparse-1.7.2.tar.gz", hash = "sha256:64fd2e948fc96e8a1a06e0e72c111c2ce7f3af74126d75c0f5f63926e7289cd1", size = 38500, upload-time = "2025-11-01T10:35:44.232Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/04/80/97b6f357ac458d9ad9872cc3183ca09ef7439ac89e030ea43053ba1294b6/rich_argparse-1.7.2-py3-none-any.whl", hash = "sha256:0559b1f47a19bbeb82bf15f95a057f99bcbbc98385532f57937f9fc57acc501a", size = 25476, upload-time = "2025-11-01T10:35:42.681Z" },
-]
-
-[[package]]
-name = "sakila-lab-tarik-mulisic"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "dlt", extra = ["parquet", "sql-database"] },
-    { name = "duckdb" },
-    { name = "ipykernel" },
-    { name = "matplotlib" },
-    { name = "pandas" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "dlt", extras = ["parquet", "sql-database"], specifier = ">=1.19.1" },
-    { name = "duckdb", specifier = ">=1.4.2" },
-    { name = "ipykernel", specifier = ">=7.1.0" },
-    { name = "matplotlib", specifier = ">=3.10.7" },
-    { name = "pandas", specifier = ">=2.3.3" },
 ]
 
 [[package]]
