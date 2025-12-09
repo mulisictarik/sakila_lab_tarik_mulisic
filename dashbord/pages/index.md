@@ -1,59 +1,25 @@
 ---
-title: Welcome to Evidence
+title: DVD Rental Data Analysis (Sakila Lab)
 ---
 
-<Details title='How to edit this page'>
+# 🎬 Sakila DVD Rental Analysis Dashboard
 
-This page can be found in your project at `/pages/index.md`. Make a change to the markdown file and save it to see the change take effect in your browser.
+## Hello and Welcome!
 
-</Details>
+This dashboard serves as the central hub for the **DVD Rental Data Analysis** project, a core requirement of the SQL lab. The purpose is to apply SQL and data analysis techniques to find valuable insights from our legacy **Sakila database** (DVD rental data).
 
-```sql categories
-  select
-      category
-  from needful_things.orders
-  group by category
-```
+The entire project focuses on migrating legacy SQLite data to **DuckDB** and presenting key findings as requested in the tasks.
 
-<Dropdown data={categories} name=category value=category>
-    <DropdownOption value="%" valueLabel="All Categories"/>
-</Dropdown>
+### 📊 Project Goals & Content Overview
 
-<Dropdown name=year>
-    <DropdownOption value=% valueLabel="All Years"/>
-    <DropdownOption value=2019/>
-    <DropdownOption value=2020/>
-    <DropdownOption value=2021/>
-</Dropdown>
+This report contains the following key components, which you can navigate to via the sidebar:
 
-```sql orders_by_category
-  select
-      date_trunc('month', order_datetime) as month,
-      sum(sales) as sales_usd,
-      category
-  from needful_things.orders
-  where category like '${inputs.category.value}'
-  and date_part('year', order_datetime) like '${inputs.year.value}'
-  group by all
-  order by sales_usd desc
-```
+- **Task 1: Exploratory Data Analysis (EDA)**
+  - Answers to specific questions on movie lengths, popular titles, rental rates, and top actors (e.g., longest movies, top 10 actors).
+  - _Source:_ The Jupyter Notebook (`.ipynb`) used for Python/Pandas/DuckDB analysis.
+- **Task 2: Visual Insights (Graphs)**
+  - Key visualizations, including a **bar chart** showing the top 5 customers by total spend and a **revenue breakdown** by film category.
+- **Task 3: BI Report (Bonus)**
+  - A full **interactive dashboard** where Task 1 and 2 findings are presented using Evidence tables and charts.
 
-<BarChart
-    data={orders_by_category}
-    title="Sales by Month, {inputs.category.label}"
-    x=month
-    y=sales_usd
-    series=category
-/>
-
-## What's Next?
-
-- [Connect your data sources](settings)
-- Edit/add markdown files in the `pages` folder
-- Deploy your project with [Evidence Cloud](https://evidence.dev/cloud)
-
-## Get Support
-
-- Message us on [Slack](https://slack.evidence.dev/)
-- Read the [Docs](https://docs.evidence.dev/)
-- Open an issue on [Github](https://github.com/evidence-dev/evidence)
+---
