@@ -1,5 +1,5 @@
 {
-  "editor.acceptSuggestionOnEnter": "off",
+  "editor.acceptSuggestionOnEnter": false,
   "editor.quickSuggestions": {
     "other": true,
     "comments": false,
