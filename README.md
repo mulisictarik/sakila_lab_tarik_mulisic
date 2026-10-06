@@ -1,9 +1,16 @@
-# sakila_lab_tarik_mulisic
+# Sakila Database Analysis & SQL Lab
 
-In this lab I will do data analysis on Sakila database ...
+Ett praktiskt databasprojekt genomfört inom ramen för MLOps-utbildningen vid Nackademin. Syftet med labben är att utforska och analysera relationsdata i den etablerade Sakila-databasen med hjälp av avancerade SQL-frågor, joins och aggregeringar.
 
-TODO: highlihgts from the lan
-TODO: descriptions about the lab
-TODO: nice images/screenshots
+## Innehåll & Syfte
+- **Databasförståelse:** Analys av tabellstrukturer, primär-/främmande nycklar och relationer i en normaliserad databas.
+- **SQL-queries:** Formulering av komplexa queries med `JOIN`, `GROUP BY`, `HAVING` och subqueries för att besvara specifika verksamhetsfrågor.
+- **Dataextraktion:** Strukturering och bearbetning av data för vidare analys och visualisering.
 
-idea is to make someone directly understand what your lab is about to be interested to learn more
+## Teknologier
+- **Databas:** MySQL / PostgreSQL
+- **Språk:** SQL
+- **Verktyg:** DBeaver / Datagrip / Terminal / Git
+
+## Struktur
+Projektet innehåller SQL-skript med lösningsförslag och dokumenterade queries för de olika uppgifterna i labben.
